@@ -1,4 +1,4 @@
-TFG:
+﻿TFG:
 http://www.iquilezles.org/index.html
 http://www.iquilezles.org/www/articles/terrainmarching/terrainmarching.htm
 http://www.iquilezles.org/www/articles/morenoise/morenoise.htm
@@ -14,3 +14,48 @@ Nuestros:
 https://imaginary.org/film/3d-fractal-trip-far-away
 -Info: http://personales.upv.es/rmullor/Fractales/Fractales.htm
 -Software: http://www.cadnav.com/software/view-46041.html
+- https://github.com/tntmeijs/GLSL-Shader-Includes
+
+-Qué es un fractal: https://ast.wikipedia.org/wiki/Fractal
+
+-MandelBox 1: https://www.shadertoy.com/view/wldGR4
+-MandelBox 2: https://www.shadertoy.com/view/tdXSRn
+-MandelBox tunel: https://www.shadertoy.com/view/MlfSWX
+-MandelBox 3: https://www.shadertoy.com/view/3dBXzd
+-Sobre Mandelbox 1: http://blog.hvidtfeldts.net/index.php/2011/11/distance-estimated-3d-fractals-vi-the-mandelbox/
+-Sobre Mandelbox 2: http://www.fractalforums.com/3d-fractal-generation/a-mandelbox-distance-estimate-formula/
+
+-Sistema de coordenadas de Vulkan: 
+    https://www.saschawillems.de/blog/2019/03/29/flipping-the-vulkan-viewport/
+    https://stackoverflow.com/questions/45570326/flipping-the-viewport-in-vulkan
+    http://anki3d.org/vulkan-coordinate-system/
+    https://forum.unity.com/threads/fix-for-directx-flipping-vertical-screen-coordinates-in-image-effects-not-working.266455/
+    https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFrontFace.html
+
+-Mandelbulb 1: https://www.shadertoy.com/view/wdjGWR
+-Mandelbulb2: https://www.shadertoy.com/view/ltfSWn
+
+-Fractal terrain 1: https://www.shadertoy.com/view/3lcGRX
+-Fractal terrain 2: https://www.shadertoy.com/view/3ldGRX
+-Fractal terrain 3: https://www.shadertoy.com/view/MdX3Rr
+-Fractal terrain 4: https://www.shadertoy.com/view/3ss3R4
+-Fractal terrain 5: https://stackoverflow.com/questions/4753055/perlin-noise-generation-for-terrain
+-Fractal terrain 6: https://flafla2.github.io/2014/08/09/perlinnoise.html
+-Fractal terrain 7: https://www.shadertoy.com/view/4sXGRM
+
+-Planet terrain: https://www.shadertoy.com/view/lltBWB
+-Cloud terrain: https://www.shadertoy.com/view/XtS3DD
+
+-Physics:
+https://stackoverflow.com/questions/9600801/evenly-distributing-n-points-on-a-sphere
+
+-Fractal Pyhsics:
+https://stackoverflow.com/questions/31064234/find-the-angle-between-two-vectors-from-an-arbitrary-origin
+https://gamedev.stackexchange.com/questions/117262/how-do-you-build-a-rotation-matrix-from-a-normalized-vector
+
+-Vulkan Subpasses: 
+https://www.saschawillems.de/blog/2018/07/19/vulkan-input-attachments-and-sub-passes/
+
+-Vulkan:
+ - Compute shaders: https://gist.github.com/sheredom/523f02bbad2ae397d7ed255f3f3b5a7f / https://gist.github.com/sheredom/523f02bbad2ae397d7ed255f3f3b5a7f
+ - Getting started: https://vulkan-tutorial.com/

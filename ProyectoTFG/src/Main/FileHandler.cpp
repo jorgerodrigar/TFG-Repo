@@ -44,12 +44,12 @@ std::fstream FileHandler::openOutputAppendedFile(const char * filePath)
 	return file;
 }
 
-std::string FileHandler::readInputFile(const char* inputFilePath)
+std::fstream FileHandler::readInputFile(const char* inputFilePath, std::string& buffer)
 {
 	std::fstream inputFile = openInputFile(inputFilePath);
-	std::string fileContent = _readInputFilePrivate(inputFile);
+	buffer = _readInputFilePrivate(inputFile);
 
-	return fileContent;
+	return inputFile;
 }
 
 std::string FileHandler::readInputFile(std::fstream & inputFile)
@@ -66,10 +66,28 @@ std::string FileHandler::readLineFromInputFile(std::fstream& inputFile)
 		std::getline(inputFile, fileLine);
 	}
 	catch (std::fstream::failure exception) {
-		_logMessageError("ERROR::LINE_NOT_SUCCESFULLY_READ::MAYBE_YOU_HAVE_REACHED_EOF");
+		_logMessageError("LOG::REACHED_EOF");
+		fileLine = "EOF";
 	}
 
 	return fileLine;
+}
+
+std::vector<char> FileHandler::readBinaryFile(const std::string& filename)
+{
+	std::ifstream file(filename, std::ios::ate | std::ios::binary); // start reading at the end to allocate memory
+
+	if (!file.is_open()) {
+		throw std::runtime_error("failed to open file!");
+	}
+
+	size_t fileSize = (size_t)file.tellg();
+	std::vector<char> buffer(fileSize);
+	file.seekg(0);
+	file.read(buffer.data(), fileSize);
+	file.close();
+
+	return buffer;
 }
 
 void FileHandler::writeRawStringToOutputFile(std::fstream& outputFile, const std::string & stringToWrite)
@@ -95,6 +113,13 @@ void FileHandler::closeFile(std::fstream& file)
 	}
 	catch (std::fstream::failure exception) {
 		_logMessageError("ERROR::FILE_NOT_SUCCESFULLY_CLOSED::MAYBE_ALREADY_CLOSED");
+	}
+}
+
+void FileHandler::deleteFile(const char* filePath)
+{
+	if (remove(filePath) != 0) {
+		_logMessageError("ERROR::" + std::string(filePath) + " ::FILE_NOT_SUCCESFULLY_DELETED");
 	}
 }
 
